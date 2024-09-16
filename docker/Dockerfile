@@ -24,9 +24,10 @@ RUN pip3 install "colabfold[alphafold] @ git+https://github.com/sokrypton/ColabF
 
 # Setup MMseq2 database
 RUN mkdir -p /database && \
-    wget https://github.com/soedinglab/MMseqs2/releases/download/13-45111/uniref30_2202_db.tar.gz && \
-    tar -xzvf uniref30_2202_db.tar.gz -C /database && \
-    rm uniref30_2202_db.tar.gz
+    cd /database && \
+    wget https://www.dropbox.com/s/dge2wsqdclryfxd/uniref.tar.gz && \
+    tar -xzvf uniref.tar.gz && \
+    rm uniref.tar.gz
 
 # Copy start script
 COPY start.sh /app/start.sh
