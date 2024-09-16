@@ -38,7 +38,6 @@ RUN mkdir -p /database && \
 # Copy application files
 COPY Dockerfile /app/Dockerfile
 COPY main.py /app/main.py
-COPY requirements.txt /app/requirements.txt
 COPY start.sh /app/start.sh
 
 RUN ls -la /app
