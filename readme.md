@@ -50,8 +50,8 @@ rm -rf /home/lily/.bacalhau
 
 1. Test in Docker locally:
    ```bash
-   docker build --progress=plain -f Dockerfile -t test .
-   docker run --log-driver json-file --log-opt max-size=10m test --network none
+   docker build --progress=plain -f Dockerfile -t colabfold .
+   docker run --log-driver json-file --log-opt max-size=10m colabfold --network none
    ```
 
 2. Push the image to Docker Hub:

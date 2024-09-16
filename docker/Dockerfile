@@ -19,10 +19,6 @@ RUN wget https://github.com/soedinglab/MMseqs2/releases/latest/download/mmseqs-l
     mv mmseqs/bin/* /usr/local/bin/ && \
     rm -rf mmseqs mmseqs-linux-avx2.tar.gz
 
-# Copy and install Python dependencies
-COPY requirements.txt /app/requirements.txt
-RUN pip3 install --no-cache-dir -r requirements.txt
-
 # Install ColabFold
 RUN pip3 install "colabfold[alphafold] @ git+https://github.com/sokrypton/ColabFold"
 
